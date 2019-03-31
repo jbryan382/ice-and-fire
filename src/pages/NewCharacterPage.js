@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Form from 'react-jsonschema-form'
 import axios from 'axios'
-import CharacterPage from './CharacterPage'
+import { Link } from 'react-router-dom'
 
 class NewCharacterPage extends Component {
   state = {
@@ -25,7 +25,7 @@ class NewCharacterPage extends Component {
           default: 'No title given'
         },
         age: { type: 'number', title: 'Character Age', default: 0 },
-        Living: {
+        living: {
           type: 'boolean',
           title: 'Are they living... please let them be okay',
           default: true
@@ -53,7 +53,14 @@ class NewCharacterPage extends Component {
   render() {
     return (
       <>
-        <Form schema={this.state.formSchema} onSubmit={this.onSubmit} />
+        <Form
+          schema={this.state.formSchema}
+          onSubmit={this.onSubmit}
+          className="form"
+        />
+        <Link to={'/'} className="back-home">
+          Back to our Characters
+        </Link>
       </>
     )
   }
