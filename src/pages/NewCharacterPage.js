@@ -25,6 +25,7 @@ class NewCharacterPage extends Component {
           default: 'No title given'
         },
         age: { type: 'number', title: 'Character Age', default: 0 },
+        houseId: { type: 'number', title: 'Associated House', default: 0 },
         living: {
           type: 'boolean',
           title: 'Are they living... please let them be okay',
@@ -40,7 +41,7 @@ class NewCharacterPage extends Component {
     const data = { ...event.formData }
     console.log(data)
     axios
-      .post('https://localhost:5001/api/characters', data, {
+      .post('https://localhost:5001/api/Character', data, {
         headers: {
           'Content-type': 'application/json'
         }

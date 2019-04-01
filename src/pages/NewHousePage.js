@@ -40,7 +40,7 @@ class NewHousePage extends Component {
     const data = { ...event.formData }
     console.log(data)
     axios
-      .post('https://localhost:5001/api/houses', data, {
+      .post('https://localhost:5001/api/Houses', data, {
         headers: {
           'Content-type': 'application/json'
         }

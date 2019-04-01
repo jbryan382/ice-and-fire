@@ -33,16 +33,10 @@ class CharacterPage extends Component {
                   <li key={i}>
                     {this.state.characters[i].name}
                     <ul>
-                      {this.state.characters.map((c, j) => {
-                        return (
-                          <>
-                            <li key={j}>{this.state.characters[j].gender}</li>
-                            <li key={j}>{this.state.characters[j].age}</li>
-                            <li key={j}>{this.state.characters[j].title}</li>
-                            <li key={j}>{this.state.characters[j].living}</li>
-                          </>
-                        )
-                      })}
+                      <li>{this.state.characters[i].gender}</li>
+                      <li>{this.state.characters[i].age}</li>
+                      <li>{this.state.characters[i].title}</li>
+                      <li>{this.state.characters[i].houseId}</li>
                     </ul>
                   </li>
                 </>
