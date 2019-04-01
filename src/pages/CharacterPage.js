@@ -23,6 +23,7 @@ class CharacterPage extends Component {
         <header>
           <h1>List of Game of Thrones Characters</h1>
           <Link to={'/NewCharacter'}>Add Someone New</Link>
+          <Link to={'/NewHouse'}>Add Another House</Link>
         </header>
         <section>
           <ul>
